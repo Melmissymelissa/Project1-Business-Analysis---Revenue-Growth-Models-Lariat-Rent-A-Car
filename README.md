@@ -6,7 +6,7 @@
    ## Table of Contents
    - [Introduction](#introduction)
    - [Data](#data)
-   - [Installation](#installation)
+   - [Data Preperation](#datapreperation)
    - [EDA](#EDA)
    - [Analysis](#analysis)
    - [Results](#results)
@@ -27,10 +27,27 @@ The dataset used for this data analysis project consists of four Excel workbooks
 3. Car Costs: contains data on the costs associated with the rental car fleet. It includes information such as monthly car costs, insurance costs, and other financial aspects related to the vehicles. Link to this workbook <a href="https://github.com/Melmissymelissa/Project1-Business-Analysis-Revenue-Growth-Models-Lariat-Rent-A-Car/blob/main/project_root/raw_data/car_costs.xlsx">Here</a>
 4. Branch Location: contains data on each branch location within the company. It includs information such as branchID, city and state of each branch.
 
-## EDA
+## Data Prepratation 
 
-1. Data Wrangle: Use VLOOKUP to consolidate data into a single workbook with four separate worksheets.
+1. Data Wrangle: Use VLOOKUP to consolidate raw data into a single workbook with five separate worksheets.
+   
 2. Created new data fields on the new consolidated data worksheet:
 - Popularity Index: Calculates a count of rented dates per car in order to identify the most popular cars, using COUNTIF. (Average Popularity Index is 20)
-- Popularity Score: Assigns a score based on the popularity index number. If the popularity index number is greater than or equal to 20, it is considered "Above" and assigned a score of "Above." For any other value, it is considered "Below" and assigned a score of "Below." This score helps determine the level of popularity for a particular item or entity based on the given index number.
-   
+- Popularity Score: Assigns a score based on the popularity index number. If the popularity index number is greater than or equal to 20, it is considered "Above" and assigned a score of "Above." For any other value, it is considered "Below" and assigned a score of "Below." This score helps determine the level of popularity for a particular car based on the given index number.
+- Total Rev: Calculates the revenue of each car
+- Yearly Costs: Calculates the yearly costs of each car
+- Total Car Profit: Calculates the profit made by each car (Average profit per car is $5,627)
+- Car Profit Score: Assigns a score based on the total car profit. If the total car profit is greater than or equal to $5,627 it is considered "Above" and assigned a score of "Above." For any other value, it is considered "Below" and assigned a score of "Below." This score helps determine the level of cars making a profit or not
+
+![Screen Shot 2023-12-31 at 12 53 39 PM](https://github.com/Melmissymelissa/Project1-Business-Analysis-Revenue-Growth-Models-Lariat-Rent-A-Car/assets/142250108/d68038c0-5e48-4173-b3fa-460aef0a380b)
+
+## Exploratory Data Analysis
+I used Pivot Tables in Excel to answer these questions: 
+
+1. How many cars are not making a profit?
+
+![Screen Shot 2023-12-31 at 1 05 30 PM](https://github.com/Melmissymelissa/Project1-Business-Analysis-Revenue-Growth-Models-Lariat-Rent-A-Car/assets/142250108/6ddb38b2-e6f6-4ea4-a2ab-60c57ce50027)
+
+2. What are the Top 10 Most Profitable Cars?
+
+![Screen Shot 2023-12-31 at 1 35 45 PM](https://github.com/Melmissymelissa/Project1-Business-Analysis-Revenue-Growth-Models-Lariat-Rent-A-Car/assets/142250108/b2d182a4-41fd-4d78-80c3-af61149102e3)
